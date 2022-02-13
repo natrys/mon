@@ -1,0 +1,12 @@
+[package]
+name = "mon"
+description = "Small uptime (ping) status change monitoring utility"
+authors = ["Imran Khan <contact@imrankhan.live>"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "*"
+surge-ping = "0.4.*"
+tokio = { version = "1.16.*", features = ["net", "rt-multi-thread", "sync"] }
+clap = { version = "3.0.*", features = ["derive"] }

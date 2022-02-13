@@ -1,0 +1,7 @@
+*** About
+
+Small uptime (ping) status change monitoring utility, for when heavier solutions are redundant.
+
+#+begin_src
+
+#+end_src
