@@ -2,6 +2,30 @@
 
 Small uptime (ping) status change monitoring utility, for when heavier solutions are redundant.
 
-#+begin_src
+*** Usage
 
+#+begin_src
+mon 0.1.0                                                                                                                                                              
+Small uptime (ping) status change monitoring utility
+
+USAGE:
+    mon [OPTIONS] <DEST>
+
+ARGS:
+    <DEST>    
+
+OPTIONS:
+    -i, --interval <INTERVAL>    Interval (in seconds) between heart beat pings [default: 15]
+    -v, --verify <VERIFY>        Verify status change for time (in seconds) before confirming
+                                 [default: 5]
+    -n, --notify <NOTIFY>        Notify when host goes up or down [default: down] [possible values:
+                                 up, down]
+    -h, --help                   Print help information
+    -V, --version                Print version information
+#+end_src
+
+So for example, to be notified (via terminal bell) when say a LAN node goes _down_:
+
+#+begin_src sh
+cargo run --release -- --interval 15 --notify down 192.168.0.2
 #+end_src
